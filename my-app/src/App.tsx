@@ -1,27 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-import { Button } from "@chakra-ui/react"
+import WelcomeBox from './components/WelcomeBox/WelcomeBox';
+import SignUp from './components/SignUp/SignUp';
+import LogIn from './components/LogIn/LogIn';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('welcome');
+
+  const handleLogInClick = () => {
+    setCurrentPage('log-in');
+  }
+
+  const handleSignUpClick = () => {
+    setCurrentPage('sign-up');
+  }
+
   return (
     <div className="App">
-      <Button colorScheme="blue" variant="ghost">Button</Button>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {(currentPage === 'welcome') ? <WelcomeBox handleLogInClick={handleLogInClick} handleSignUpClick={handleSignUpClick}/> : null}
+      {currentPage === 'sign-up' ? <SignUp /> : null}
+      {currentPage === 'log-in' ? <LogIn /> : null}
     </div>
   );
 }
