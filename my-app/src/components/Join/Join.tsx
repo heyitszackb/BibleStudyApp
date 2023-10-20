@@ -1,14 +1,14 @@
 import React from 'react';
-import './SignUp.css';
+import './Join.css';
 import { Button, Card, CardBody, CardFooter, CardHeader, Heading, Text } from "@chakra-ui/react"
 
 
-interface SignUpProps {
-  handleGoToWelcomePage: () => void;
+interface JoinProps {
+  handleGoToDashboardPage: () => void;
   handleGoToJoinCreate: () => void;
 }
 
-const SignUp: React.FC<SignUpProps> = ({ handleGoToWelcomePage, handleGoToJoinCreate }) => {
+const Join: React.FC<JoinProps> = ({ handleGoToDashboardPage, handleGoToJoinCreate }) => {
   return (
     <div className="logBox">
         <Card align='center' className="card">
@@ -16,16 +16,16 @@ const SignUp: React.FC<SignUpProps> = ({ handleGoToWelcomePage, handleGoToJoinCr
           <Heading size='md'>Bibly Study App</Heading>
         </CardHeader>
         <CardBody>
-          <Text>Sign up below to create an account</Text>
-          (Create account form here)
+          <Text>Let's join a group!</Text>
+          (List of existing groups)
         </CardBody>
         <CardFooter className="footer">
-          <Button colorScheme='blue' onClick={handleGoToJoinCreate}>Create Account</Button>
-          <Button colorScheme='blue' onClick={handleGoToWelcomePage}>Go Back</Button>
+          <Button colorScheme='blue' onClick={handleGoToDashboardPage}>Join Group</Button>
+          <Button colorScheme='blue' onClick={handleGoToJoinCreate}>Go Back</Button>
         </CardFooter>
       </Card>
     </div>
   );
 }
 
-export default SignUp;
+export default Join;

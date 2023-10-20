@@ -4,11 +4,12 @@ import { Button, Card, CardBody, CardFooter, CardHeader, Heading, Text } from "@
 
 
 interface LogInProps {
-  handleGoToWelcomePage: () => void;
-  handleGoToDashboardPage: () => void;
+  handleGoToJoin: () => void;
+  handleGoToSignUpPage: () => void;
+  handleGoToCreate: () => void;
 }
 
-const JoinCreate: React.FC<LogInProps> = ({ handleGoToWelcomePage, handleGoToDashboardPage }) => {
+const JoinCreate: React.FC<LogInProps> = ({ handleGoToJoin, handleGoToSignUpPage, handleGoToCreate }) => {
   return (
     <div className="logBox">
         <Card align='center' className="card">
@@ -19,8 +20,9 @@ const JoinCreate: React.FC<LogInProps> = ({ handleGoToWelcomePage, handleGoToDas
           <Text>Do you want to create a new group, or join an existing group?</Text>
         </CardBody>
         <CardFooter className="footer">
-          <Button colorScheme='blue' onClick={handleGoToDashboardPage}>Continue to App</Button>
-          <Button colorScheme='blue' onClick={handleGoToWelcomePage}>Go Back</Button>
+          <Button colorScheme='blue' onClick={handleGoToJoin}>Join</Button>
+          <Button colorScheme='blue' onClick={handleGoToCreate}>Create</Button>
+          <Button colorScheme='blue' onClick={handleGoToSignUpPage}>Go Back</Button>
         </CardFooter>
       </Card>
     </div>
