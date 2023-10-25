@@ -1,5 +1,9 @@
 import React from 'react';
+
+// Styles
 import './SignUp.css';
+
+// Components
 import { Button, Card, CardBody, CardFooter, CardHeader, Heading, Text } from "@chakra-ui/react"
 
 
@@ -12,7 +16,7 @@ const SignUp: React.FC<SignUpProps> = ({ handleGoToWelcomePage, handleGoToJoinCr
   return (
     <div className="logBox">
         <Card align='center' className="card">
-        <CardHeader>
+        <CardHeader className="header">
           <Heading size='md'>Bibly Study App</Heading>
         </CardHeader>
         <CardBody>

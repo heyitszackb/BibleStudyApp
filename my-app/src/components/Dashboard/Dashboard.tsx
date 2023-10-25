@@ -9,7 +9,8 @@ interface DashboardProps {
 const Dashboard: React.FC<DashboardProps> = ({ handleGoToWelcomePage }) => {
   return (
     <div className="mainBox">
-      Dashboard Page
+      <div>Dashboard Page</div>
+      <div>Currently logged in user: Zack Brandon</div>
       <Button colorScheme='blue' onClick={handleGoToWelcomePage}>Log Out</Button>
     </div>
   );
