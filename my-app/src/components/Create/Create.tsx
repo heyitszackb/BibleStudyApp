@@ -1,6 +1,6 @@
 import React from 'react';
 import './Create.css';
-import { Button, Card, CardBody, CardFooter, CardHeader, Heading, Text } from "@chakra-ui/react"
+import { Textarea, Input, Button, Card, CardBody, CardFooter, CardHeader, Heading, Text } from "@chakra-ui/react"
 
 
 interface CreateProps {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './LogIn.css';
-import { Button, Card, CardBody, CardFooter, CardHeader, Heading, Text } from "@chakra-ui/react"
+import { Input, Button, Card, CardBody, CardFooter, CardHeader, Heading, Text } from "@chakra-ui/react"
 
 
 interface LogInProps {
@@ -17,6 +17,9 @@ const LogIn: React.FC<LogInProps> = ({ handleGoToWelcomePage, handleGoToDashboar
         </CardHeader>
         <CardBody>
           <Text>Log In Below!</Text>
+          <br />
+          <Input placeholder="Username" />
+          <Input placeholder="Password" />
         </CardBody>
         <CardFooter className="footer">
           <Button colorScheme='blue' onClick={handleGoToDashboardPage}>Continue to App</Button>
