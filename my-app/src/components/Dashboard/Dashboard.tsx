@@ -2,9 +2,9 @@ import React from 'react';
 import './Dashboard.css';
 import { Button, Text } from '@chakra-ui/react';
 
-import { Meetings } from './Meetings/Meetings';
-import { Members } from './Members/Members';
-import { Announcement } from './Announcement/Announcement';
+import Meetings from './Meetings/Meetings';
+import Members from './Members/Members';
+import Announcement from './Announcement/Announcement';
 
 interface DashboardProps {
   handleGoToWelcomePage: () => void;
