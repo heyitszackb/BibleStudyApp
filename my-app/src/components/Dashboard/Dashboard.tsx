@@ -1,6 +1,6 @@
 import React from 'react';
 import './Dashboard.css';
-import { Button } from '@chakra-ui/react';
+import { Button, Text } from '@chakra-ui/react';
 
 interface DashboardProps {
   handleGoToWelcomePage: () => void;
@@ -9,9 +9,14 @@ interface DashboardProps {
 const Dashboard: React.FC<DashboardProps> = ({ handleGoToWelcomePage }) => {
   return (
     <div className="mainBox">
-      <div>Dashboard Page</div>
-      <div>Currently logged in user: Zack Brandon</div>
-      <Button colorScheme='blue' onClick={handleGoToWelcomePage}>Log Out</Button>
+      <div className="navBar">
+        <Text>NavBar</Text>
+        <Text>Group Name </Text>
+        <Button className="button" colorScheme='blue' onClick={handleGoToWelcomePage}>Log Out</Button>
+      </div>
+      <div>Announcement</div>
+      <div>Meetings</div>
+      <div>Members</div>
     </div>
   );
 }
