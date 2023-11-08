@@ -9,7 +9,7 @@ interface MembersProps {
 const Members: React.FC<MembersProps> = () => {
   return (
     <div className="">
-        Meetings
+        Members
     </div>
   );
 }

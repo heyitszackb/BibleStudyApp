@@ -1,6 +1,9 @@
 import React from 'react';
 import './Meetings.css';
+import Meeting from '../Meeting/Meeting';
+
 import { Button, Card, CardBody, CardFooter, CardHeader, Heading, Text } from "@chakra-ui/react"
+
 
 
 interface MeetingsProps {
@@ -9,7 +12,7 @@ interface MeetingsProps {
 const Meetings: React.FC<MeetingsProps> = () => {
   return (
     <div className="">
-        Meetings
+        <Meeting />
     </div>
   );
 }
