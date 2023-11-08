@@ -1,35 +1,49 @@
 import React from 'react';
 import './Meeting.css';
 
-import { Avatar, AvatarBadge, Button, Card, CardBody, CardFooter, CardHeader, Heading, Stack, Text } from "@chakra-ui/react"
+// Types
+import { Person, Meeting } from '../../../types';
+
+import { Avatar, AvatarBadge, AvatarGroup, Button, Card, CardBody, CardFooter, CardHeader, Heading, Stack, Text } from "@chakra-ui/react"
 
 
 interface MeetingProps {
+  name: string;
+  date: Date;
+  time: string;
+  attendees: {
+    person: Person;
+    isAttending: boolean;
+  }[];
 }
 
-const Meeting: React.FC<MeetingProps> = () => {
+const MeetingComponent: React.FC<MeetingProps> = ({ name, date, time, attendees }: MeetingProps) => {
+  const avatars = attendees.map((attendee) => (
+    <Avatar name={attendee.person.name} src={attendee.person.name}>
+      <AvatarBadge bg={attendee.isAttending ? 'green.500' : 'red.500'} boxSize='1.25em' />
+    </Avatar>
+  ));
+
   return (
     <div>
-        <Card style={{width: '300px', height: '200px'}}>
-          <CardBody>
-            <Text>Meeting Name</Text>
+        <Card style={{width: '300px', height: '260px'}}>
+          <CardHeader>
+            <Text fontSize={22}>{name}</Text>
+            <Text>{date.toDateString()} @ {time}</Text>
+          </CardHeader>
+          <CardBody style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
-            <Stack direction='row' spacing={4} style={{paddingTop: '20px'}}>
-              <Avatar>
-                <AvatarBadge boxSize='1.25em' bg='green.500' />
-              </Avatar>
-              <Avatar>
-                <AvatarBadge bg='red.500' boxSize='1.25em' />
-              </Avatar>
-            </Stack>
+            <AvatarGroup size='md' max={3}>
+              {avatars}
+            </AvatarGroup>
           </CardBody>
           <CardFooter style={{display: 'flex', justifyContent: 'space-between'}}>
-            <Button variant="solid">Attending</Button>
-            <Button variant="outline">Not Going</Button>
+            <Button variant="solid" bg="green.500" style={{color: 'white'}}>Attending</Button>
+            <Button variant="ghost" color="red.500">Not Going</Button>
           </CardFooter>
         </Card>
     </div>
   );
 }
 
-export default Meeting;
+export default MeetingComponent;
