@@ -5,6 +5,7 @@ import { Button, Divider, Text } from '@chakra-ui/react';
 import Meetings from './Meetings/Meetings';
 import Members from './Members/Members';
 import Announcement from './Announcement/Announcement';
+import SampleMembersComponent from './Members/Members';
 
 interface DashboardProps {
   handleGoToWelcomePage: () => void;
@@ -26,7 +27,8 @@ const Dashboard: React.FC<DashboardProps> = ({ handleGoToWelcomePage }) => {
       <Divider orientation='horizontal' style={{width: '500px', paddingTop: '20px'}} />
       <Meetings />
       <Divider orientation='horizontal' style={{width: '500px', paddingTop: '20px'}} />
-      <Members />
+      <Text fontSize={32} style={{alignItems: 'center'}}>Members</Text>
+      <SampleMembersComponent />
       <Divider orientation='horizontal' style={{width: '500px', paddingTop: '20px'}} />
     </div>
   );
