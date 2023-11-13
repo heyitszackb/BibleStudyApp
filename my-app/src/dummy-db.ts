@@ -12,7 +12,7 @@ const people = [
 // Sample Meetings
 const meetings: Meeting[] = [
     {
-        name: 'Team Sync',
+        name: 'Study of Matthew',
         date: new Date(2023, 10, 15),
         time: '10:00 AM',
         attendees: [
@@ -24,7 +24,7 @@ const meetings: Meeting[] = [
         ]
     },
     {
-        name: 'Project Kickoff',
+        name: 'Study of 1 Peter',
         date: new Date(2023, 10, 18),
         time: '2:00 PM',
         attendees: [
@@ -35,7 +35,7 @@ const meetings: Meeting[] = [
     },
     // Additional Meetings
     {
-        name: 'Marketing Strategy',
+        name: 'Study of Genesis',
         date: new Date(2023, 10, 20),
         time: '3:30 PM',
         attendees: [
@@ -44,7 +44,7 @@ const meetings: Meeting[] = [
         ]
     },
     {
-        name: 'Product Demo',
+        name: 'Study of Ephesians',
         date: new Date(2023, 10, 22),
         time: '11:00 AM',
         attendees: [
@@ -52,7 +52,7 @@ const meetings: Meeting[] = [
         ]
     },
     {
-        name: 'Budget Review',
+        name: 'Study of Galatians',
         date: new Date(2023, 10, 25),
         time: '9:00 AM',
         attendees: [
@@ -63,7 +63,7 @@ const meetings: Meeting[] = [
         ]
     },
     {
-        name: 'Team Building',
+        name: 'Study of James',
         date: new Date(2023, 10, 28),
         time: '4:30 PM',
         attendees: [
