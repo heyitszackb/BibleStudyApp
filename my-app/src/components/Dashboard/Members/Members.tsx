@@ -47,9 +47,3 @@ const SampleMembersComponent: React.FC = () => (
 );
 
 export default SampleMembersComponent;
-
-
-
-
-
-

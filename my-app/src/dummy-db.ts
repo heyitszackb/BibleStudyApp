@@ -16,11 +16,11 @@ const meetings: Meeting[] = [
         date: new Date(2023, 10, 15),
         time: '10:00 AM',
         attendees: [
-            { person: people[0], isAttending: true },
-            { person: people[1], isAttending: true },
+            { person: people[0], isAttending: false },
+            { person: people[1], isAttending: false },
             { person: people[2], isAttending: false },
             { person: people[3], isAttending: false },
-            { person: people[4], isAttending: true },
+            { person: people[4], isAttending: false },
         ]
     },
     {
