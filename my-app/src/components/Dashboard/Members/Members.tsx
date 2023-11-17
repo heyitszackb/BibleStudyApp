@@ -25,9 +25,9 @@ const Members: React.FC<MembersProps> = ({ members }: MembersProps) => {
         <Card key={index} style={{ width: '300px', height: '260px' }}>
           <CardHeader>
             <Text fontSize={22}>{member.person.name}</Text>
+            <Text fontSize={12}>{member.person.prayerRequest}</Text>
           </CardHeader>
           <CardBody style={{ display: 'grid', alignItems: 'center', justifyContent: 'center' }}>
-            <Text fontSize={12}>Sample Bio</Text>
             <Avatar name={member.person.name} src={member.person.image}></Avatar>
           </CardBody>
           {/* You can add more content or remove CardFooter if not needed */}

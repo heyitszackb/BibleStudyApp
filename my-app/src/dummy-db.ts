@@ -1,12 +1,32 @@
 import { Person, Meeting, Attendee } from './types';
 
 // Sample People
-const people = [
-    { name: 'Ryan Florence', image: 'https://bit.ly/ryan-florence' },
-    { name: 'Segun Adebayo', image: 'https://bit.ly/sage-adebayo' },
-    { name: 'Kent Dodds', image: 'https://bit.ly/kent-c-dodds' },
-    { name: 'Prosper Otemuyiwa', image: 'https://bit.ly/prosper-baba' },
-    { name: 'Christian Nwamba', image: 'https://bit.ly/code-beast' }
+const people: Person[] = [
+    { 
+        name: 'Ryan Florence',
+        image: 'https://bit.ly/ryan-florence',
+        prayerRequest: 'Praising God for His mercy and seeking strength in times of challenges.'
+    },
+    { 
+        name: 'Segun Adebayo',
+        image: 'https://bit.ly/sage-adebayo',
+        prayerRequest: 'Thanking God for His guidance and wisdom, seeking His help in overcoming struggles.'
+    },
+    { 
+        name: 'Kent Dodds',
+        image: 'https://bit.ly/kent-c-dodds',
+        prayerRequest: 'Praising God for success and asking for continued guidance in all endeavors.'
+    },
+    { 
+        name: 'Prosper Otemuyiwa',
+        image: 'https://bit.ly/prosper-baba',
+        prayerRequest: 'Thanking God for peace and prosperity, seeking His help in times of challenges.'
+    },
+    { 
+        name: 'Christian Nwamba',
+        image: 'https://bit.ly/code-beast',
+        prayerRequest: 'Praising God for strength and resilience, seeking His guidance in overcoming struggles.'
+    }
 ];
 
 // Sample Meetings
