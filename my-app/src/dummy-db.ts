@@ -7,7 +7,7 @@ const people: Person[] = [
         image: 'https://bit.ly/ryan-florence',
         prayerRequest: 'Praising God for His mercy and seeking strength in times of challenges.'
     },
-    { 
+    {
         name: 'Segun Adebayo',
         image: 'https://bit.ly/sage-adebayo',
         prayerRequest: 'Thanking God for His guidance and wisdom, seeking His help in overcoming struggles.'

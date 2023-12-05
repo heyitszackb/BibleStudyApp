@@ -43,6 +43,7 @@ function App() {
 
   return (
     <div className="App">
+    
       {(currentPage === 'welcome') ? <WelcomeBox handleGoToLogInPage={handleGoToLogInPage} handleGoToSignUpPage={handleGoToSignUpPage}/> : null}
       {currentPage === 'sign-up' ? <SignUp handleGoToWelcomePage={handleGoToWelcomePage} handleGoToJoinCreate={handleGoToJoinCreate}/> : null}
       {currentPage === 'log-in' ? <LogIn handleGoToWelcomePage={handleGoToWelcomePage} handleGoToDashboardPage={handleGoToDashboardPage}/> : null}
